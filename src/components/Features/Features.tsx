@@ -211,7 +211,7 @@ function Features() {
                     </div>
                     <div className='flex flex-col gap-6'>
                         {featureData.more.map((item, index) => (
-                            <div key={index} className='flex gap-4 max-w-[700px] text-justify'>
+                            <div key={index} className='flex gap-4 max-w-[700px]'>
                                 <Image src={item.img} className='w-[150px] h-full max-md:h-[90px] xl:w-[250px] object-cover rounded-3xl' width={500} height={500} alt="" />
                                 <div className='text-white flex flex-col gap-2'>
                                     <h2 className='md:text-xl font-bold'>{item.title}</h2>

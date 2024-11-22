@@ -259,7 +259,7 @@ const Header2: React.FC = () => {
                             <div className="py-6">
                                 <div className="flex flex-col items-center gap-8">
                                     <a
-                                        href="#"
+                                        href="/Communities#community"
                                         className="w-full px-10 py-4 text-xl font-bold text-center text-white rounded-md shadow-sm bg-[#4AB371] hover:bg-primary/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                     >
                                         Join Community

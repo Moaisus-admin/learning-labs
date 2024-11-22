@@ -15,6 +15,7 @@ import {
 import Image from 'next/image'
 import { ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import { Button } from '../ui/Button';
+import Link from 'next/link';
 
 const products = [
     {
@@ -259,12 +260,13 @@ const Header: React.FC = () => {
                             </div>
                             <div className="py-6">
                                 <div className="flex flex-col items-center gap-8">
-                                    <a
-                                        href="/Communities"
-                                        className="w-full px-10 py-4 text-xl font-bold text-center text-white rounded-md shadow-sm bg-[#4AB371] hover:bg-primary/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                                    >
-                                        Join Community
-                                    </a>
+                                <Link
+  href="/Communities#community"
+  className="w-full px-10 py-4 text-xl font-bold text-center text-white rounded-md shadow-sm bg-[#4AB371] hover:bg-primary/95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+>
+  Join Community
+</Link>
+
                                     {/* <a
                                         href="#"
                                         className="w-full px-10 py-4 text-base font-semibold text-center text-gray-900 border border-gray-300 rounded-md hover:bg-gray-50"

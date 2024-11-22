@@ -35,7 +35,7 @@ function Main() {
                                 <p className='text-center text-[#ECF5FF] md:text-xl lg:w-[814px] max-sm:px-5 max-sm:text-justify'>Indepth research insights transformed into powerful organization development tools & simulations, to empower business practioners to implement strategic interventions that drive growth & innovation</p>
                             </div>
                             <div className='flex gap-[20px] justify-center'>
-                                <Button onClick={()=>window.open("/Communities", "_self")} variant={'primary'} className='bg-[#00b84d] text-[#ffffff]'>Join Community</Button>
+                                <Button onClick={()=>window.open("/Communities#community", "_self")} variant={'primary'} className='bg-[#00b84d] text-[#ffffff]'>Join Community</Button>
                                 <Button variant={'outline'} className='border-[#ffffff] text-[#ffffff] '>Let’s Collaborate</Button>
                             </div>
                         </div>

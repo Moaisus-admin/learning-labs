@@ -1,5 +1,6 @@
 'use client'
 import Advisory from '@/components/Advisory/Advisory'
+import FloatingFooter from '@/components/footer/FloatingFooter'
 import Footer from '@/components/footer/Footer'
 import Header from '@/components/header/Header'
 import Partners from '@/components/Partners/Partners'
@@ -146,7 +147,7 @@ function page() {
                 Enim semper nulla quis est. Est scelerisque malesuada maecenas augue elementum integer. Sollicitudin augue in libero eu neque augue diam lectus laoreet. Viverra amet, in massa integer tincidunt ullamcorper. Accumsan massa consequat amet cursus condimentum consectetur. Enim sem cursus viverra at imperdiet.
               </p> */}
               <div>
-                <Button onClick={()=>window.open("/Communities", "_self")} variant={'primary'}>Join Community</Button>
+                <Button onClick={()=>window.open("/Communities#community", "_self")} variant={'primary'}>Join Community</Button>
               </div>
             </div>
           </div>
@@ -266,7 +267,8 @@ function page() {
       </div>
       <Advisory />
       <Footer />
-
+      <div className="pb-[85px]"></div>
+      <FloatingFooter />
     </div>
   )
 }

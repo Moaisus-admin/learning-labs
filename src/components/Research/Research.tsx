@@ -38,6 +38,7 @@ function Research() {
     const settings = {
         slidesToShow: 3,
         speed: 500,
+        dots: true,
         responsive: [
             {
                 breakpoint: 1024,

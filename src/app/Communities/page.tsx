@@ -1,12 +1,30 @@
 'use client';
 
 import CommunityFaq from '@/components/Faq/CommunityFaq';
+import FloatingFooter from '@/components/footer/FloatingFooter';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import { Button } from '@/components/ui/Button';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Page() {
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const scrollToElement = () => {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // If element is not found, retry after a short delay
+          setTimeout(scrollToElement, 100);
+        }
+      };
+      scrollToElement();
+    }
+  }, []);
+  
   return (
     <div>
       <Header />
@@ -25,18 +43,18 @@ function Page() {
             </p>
             <p className="text-[#ffc000] text-xl sm:text-2xl md:text-3xl xl:text-5xl xl:leading-[55px] font-bold mt-10">
               We support our community members with our professional tools and
-              indepth knowhow, to augument their exceptional facilitation
+              indepth know how, to augument their exceptional facilitation
               capabilities to unleash unparalleled growth & prosperity in client
               organizations.
             </p>
           </div>
         </div>
       </section>
-      <div className=' mt-10 text-black md:text-3xl sm:text-[35px] text-[38px] text-center  font-bold'>
+      <div className=' mt-10 text-black md:text-3xl sm:text-[35px] text-[38px] text-center  font-bold' id='community'>
       Community benefits
       </div>
 
-      <section className="flex justify-center items-center my-10">
+      <section className="flex justify-center items-center my-10" >
         <div className="w-[90%] xl:w-[80%] flex max-md:flex-wrap justify-center max-md:gap-10">
           <div className="max-lg:basis-1/3 max-md:min-w-full lg:min-w-[420px] xl:max-h-[645px] rounded-xl flex flex-col gap-4 p-11 bg-[#002060] shadow-logobox relative">
             {/* Background SVG positioned absolutely */}
@@ -89,6 +107,8 @@ function Page() {
       </section>
 
       <Footer />
+      <div className="pb-[85px]"></div>
+      <FloatingFooter />
     </div>
   );
 }
