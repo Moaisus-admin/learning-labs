@@ -107,7 +107,7 @@ function Page() {
       </section>
 
       <Footer />
-      <div className="pb-[85px]"></div>
+      {/* <div className="pb-[85px]"></div> */}
       <FloatingFooter />
     </div>
   );

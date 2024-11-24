@@ -134,7 +134,7 @@ function Home() {
       <Footer />
 
       {/* <div className='relative'> */}
-      <div className="pb-[85px]"></div>
+      {/* <div className="pb-[85px]"></div> */}
      <FloatingFooter />
       {/* </div> */}
     </div>
