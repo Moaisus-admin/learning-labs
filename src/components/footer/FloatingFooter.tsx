@@ -54,7 +54,7 @@ const FloatingFooter = () => {
   return (
     <div
       className={`fixed bottom-0 left-0 w-full z-20 flex items-center justify-center transition-all duration-300 mb-2 ${
-        isMinimized ? 'h-12' : 'sm:h-[80px] lg:h-[100px]'
+        isMinimized ? 'h-14' : 'sm:h-[80px] lg:h-[100px]'
       }`}
     >
       <div
@@ -66,7 +66,7 @@ const FloatingFooter = () => {
       >
         <img
           src="/images/footer/footer3.png"
-          className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+          className="absolute inset-0 w-full h-full object-cover rounded-2xl"
           alt="Footer Background"
         />
 
@@ -134,7 +134,7 @@ const FloatingFooter = () => {
                     router.push('/Communities#community');
                   }}
                   aria-label="Our Solutions"
-                  className="sm:w-[180px] w-[120px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
+                  className="sm:w-[170px] w-[110px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
                 >
                   Our Solutions
                 </button>
@@ -143,7 +143,7 @@ const FloatingFooter = () => {
                     router.push('/Communities#community');
                   }}
                   aria-label="Industries and Focus"
-                  className="sm:w-[180px] w-[120px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
+                  className="sm:w-[170px] w-[110px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
                 >
                   Industries and Focus
                 </button>
@@ -161,7 +161,7 @@ const FloatingFooter = () => {
                     router.push('/research-synopsis');
                   }}
                   aria-label="Research Synopsis"
-                  className="sm:w-[180px] w-[120px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
+                  className="sm:w-[170px] w-[110px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
                 >
                   Research Synopsis
                 </button>
