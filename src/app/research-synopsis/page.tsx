@@ -4,6 +4,7 @@ import Blog from "@/components/BlockSection";
 import { useSearchParams } from "next/navigation";
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
+import FloatingFooter from '@/components/footer/FloatingFooter';
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
         </Suspense>
       </div>
       <Footer />
+      <FloatingFooter/>
     </main>
   );
 }
