@@ -107,9 +107,10 @@ function Page() {
       </section>
 
       <Footer />
-      <div className=""></div>
-      <FloatingFooter />4
-    </div>
+
+      <FloatingFooter />
+
+   </div>
   );
 }
 

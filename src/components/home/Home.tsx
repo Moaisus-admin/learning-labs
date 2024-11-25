@@ -133,10 +133,7 @@ function Home() {
       <Research />
       <Footer />
 
-      {/* <div className='relative'> */}
-      <div className=""></div>
      <FloatingFooter />
-      {/* </div> */}
     </div>
   )
 }
