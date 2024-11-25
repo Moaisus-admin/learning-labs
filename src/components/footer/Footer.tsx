@@ -5,7 +5,7 @@ import FloatingFooter from './FloatingFooter'
 function Footer() {
     return (
         <>
-            <div className='flex min-h-auto  md:min-h-screen relative items-center flex-col gap-16 bg-[#000C19] lg:pt-20  py-10'>
+            <div className='flex min-h-auto  md:min-h-screen relative items-center flex-col gap-16 bg-[#000C19] lg:pt-20 pb-[120px] py-10'>
                 <div className='w-[90%] xl:w-[70%] relative  flex min-h-[250px] md:min-h-[383px] max-sm:my-4 items-center justify-center'>
                     <img src="/images/footer/footer1.png" className='rounded-3xl absolute min-h-[220px]' alt="Logo" />
                     <div className='flex items-center flex-col relative justify-center gap-4 sm:gap-[2.5rem] lg:gap-[3.4rem]'>

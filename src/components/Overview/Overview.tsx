@@ -27,12 +27,13 @@ function Overview() {
 
     return (
         <div className='flex flex-col items-center justify-center'>
-            <div className='max-md:w-[100%] w-full bg-[white] flex-col flex justify-center items-center'>
-                <div className='w-full border  p-5 flex justify-center min-w-[100%]'>
+            <div className='max-md:w-[100%] w-full bg-white p-1  flex-col flex justify-center items-center'>
+                <div className='w-full   flex justify-center min-w-[100%] '>
                     {/* Aspect Ratio Wrapper */}
-                    <div className='relative w-full' >
+                    {/* max-sm:rounded-lg  max-sm:border-2 max-sm:border-white bg-[#001631] */}
+                    <div className='relative w-full ' >
                         <iframe
-                            className=' rounded-lg top-0 left-0 w-full h-[90vh]'
+                            className=' max-sm:rounded-lg  top-0 left-0 w-full min-h-[35vh] md:h-[90vh] lg:h-[100vh]'
                             src={sections[activeIndex].link}
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
