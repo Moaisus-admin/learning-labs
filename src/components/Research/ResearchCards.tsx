@@ -16,7 +16,7 @@ function ResearchCards({ data }: { data: CardData }) {
           <p className='text-xl  font-bold text-white '>
             {data.title}
           </p>
-          <p className=' font-normal mb-5 xl:text-sm leading-6 text-white'>
+          <p className=' font-normal mb-5 text-sm max-sm:text-justify xl:text-sm leading-6 text-white'>
             {data.description.substring(0, 200)}
           </p>
           <div className={`${data.status == "Ongoing" ? "text-[#ffbf23]" : "text-[#00b84d]"} absolute bottom-5`}>

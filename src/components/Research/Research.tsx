@@ -99,7 +99,7 @@ function Research() {
             </div>
             <div  className=' lg:w-[95%] xl:w-[80%] items-center w-full flex flex-col gap-8 '>
                 <div >
-                    <p className='text-center text-[#001631]  font-bold sm:text-[42px] text-[38px]'>
+                    <p className='text-center text-[#001631]  font-bold sm:text-[42px] text-3xl'>
                         Join Our Research
                     </p>
                     <p className='text-[#001631] mt-4 mx-4 md:mx-0 font-medium text-center'>
