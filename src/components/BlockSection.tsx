@@ -191,7 +191,7 @@ export default function Blog({ filter }: { filter: string | null }) {
                 value={selectedHierarchy || "All"}
                 onChange={(e) => setSelectedHierarchy(e.target.value)}
               >
-                {["All", "Senior", "Junior", "Team Lead"].map((hierarchy) => (
+                {["All", "Organization research", "Maturity assessment tool", "Business simulation games","Case studies","Best practice studies","Industry benchmarking"].map((hierarchy) => (
                   <option key={hierarchy} value={hierarchy}>{hierarchy}</option>
                 ))}
               </select>
