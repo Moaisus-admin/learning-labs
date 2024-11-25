@@ -183,7 +183,7 @@ function Features() {
             </div>
             <div className='relative w-[95%] flex flex-col gap-8'>
                 <div>
-                    <h1 className='text-white md:text-3xl sm:text-[35px] text-[38px] text-center mt-5 font-bold'>Industries in focus</h1>
+                    <h1 className='text-white text-3xl md:text-3xl lg:text-[42px]  text-center mt-5 font-bold'>Industries in focus</h1>
                 </div>
                 <div className='flex justify-center'>
                     <div className='bg-[rgba(255,255,255,0.12)] max-lg:overflow-x-scroll w-[948px] rounded-[888px] flex md:justify-center px-4 py-2 gap-[42px]'>
@@ -201,8 +201,8 @@ function Features() {
                         <Image src="/images/features/BFHRM03INOLL101_cover image.jpg" className='w-full h-full object-cover rounded-3xl' width={500} height={500} alt="" />
                         <div className='flex flex-col gap-[5px] text-justify'>
                             <p className='text-sm text-[#E8971E]'>{featureData.date}</p>
-                            <h2 className='text-2xl font-bold text-white'>{featureData.title}</h2>
-                            <p className='text-lg text-[#BDBDBD]'>{isExpanded1 ? featureData.content : featureData.content.substring(0, 20) + "... "}
+                            <h2 className='text-xl font-medium  md:font-bold text-white'>{featureData.title}</h2>
+                            <p className='text-sm sm:text-lg text-[#BDBDBD]'>{isExpanded1 ? featureData.content : featureData.content.substring(0, 20) + "... "}
                                 <span onClick={singleToggleReadMore} className="text-[#E8971E] font-light cursor-pointer">
                                     {isExpanded1 ? "Show Less" : "Read More"}
                                 </span>
@@ -214,8 +214,8 @@ function Features() {
                             <div key={index} className='flex gap-4 max-w-[700px]'>
                                 <Image src={item.img} className='w-[150px] h-full max-md:h-[90px] xl:w-[250px] object-cover rounded-3xl' width={500} height={500} alt="" />
                                 <div className='text-white flex flex-col gap-2'>
-                                    <h2 className='md:text-xl font-bold'>{item.title}</h2>
-                                    <p className='md:text-[16px] font-normal tracking-[0.5px]'>
+                                    <h2 className='md:text-xl font-medium md:font-bold'>{item.title}</h2>
+                                    <p className='md:text-[16px] font-normal text-[#BDBDBD] tracking-[0.5px]'>
                                         {isExpanded[index] ? item.content : item.content.substring(0, 20) + "... "}
                                         <span onClick={() => toggleReadMore(index)} className="text-[#E8971E] font-light cursor-pointer">
                                             {isExpanded[index] ? "Show Less" : "Read More"}
@@ -227,7 +227,7 @@ function Features() {
                     </div>
                 </div>
                     <div className='flex items-center justify-center'>
-                        <Button onClick={() => window.open("/research-synopsis", "_self")} variant='primary' >Read More</Button>
+                        <Button onClick={() => window.open("/research-synopsis#research", "_self")} className='bg-[#00b84d]' variant='primary' >Our Research Repository</Button>
                     </div>
             </div>
         </div>

@@ -50,13 +50,13 @@ function Page() {
           </div>
         </div>
       </section>
-      <div className=' mt-10 text-black md:text-3xl sm:text-[35px] text-[38px] text-center  font-bold' id='community'>
+      <div className=' mt-10 text-black md:text-3xl sm:text-[35px] text-3xl text-center  font-bold' id='community'>
       Community benefits
       </div>
 
       <section className="flex justify-center items-center my-10" >
         <div className="w-[90%] xl:w-[80%] flex max-md:flex-wrap justify-center max-md:gap-10">
-          <div className="max-lg:basis-1/3 max-md:min-w-full lg:min-w-[420px] xl:max-h-[645px] rounded-xl flex flex-col gap-4 p-11 bg-[#002060] shadow-logobox relative">
+          <div className="max-lg:basis-1/3 max-md:min-w-full lg:min-w-[420px] xl:max-h-[645px] rounded-xl flex flex-col gap-4 px-5 py-11 sm:px-11 sm:p-11 bg-[#002060] shadow-logobox relative">
             {/* Background SVG positioned absolutely */}
             <img
               src="/images/communities/background.svg"
@@ -66,7 +66,7 @@ function Page() {
             
             {/* Button content wrapper */}
             <div className="relative z-10 text-center">
-              <div className="text-3xl sm:text-[2.6rem] text-white sm:leading-[50px] font-bold">
+              <div className="text-2xl sm:text-[2.6rem] text-white sm:leading-[50px] font-bold">
                 Join OLL community
               </div>
               <div className="mt-2 font-medium text-[#88beda] text-lg">
@@ -107,9 +107,10 @@ function Page() {
       </section>
 
       <Footer />
-      {/* <div className="pb-[85px]"></div> */}
+
       <FloatingFooter />
-    </div>
+
+   </div>
   );
 }
 
