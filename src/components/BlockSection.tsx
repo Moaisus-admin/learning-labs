@@ -139,8 +139,14 @@ export default function Blog({ filter }: { filter: string | null }) {
           </div>
         </div>
       </section>
+      <div id="research" className="w-full">
+          <div className="text-[#001d59] my-4 font-bold text-center text-3xl md:text-3xl lg:text-[42px] px-5 mt-5">
+            Research Synopsis List
+          </div>
+          </div>
       <div className=" flex max-md:flex-col w-full gap-5">
-        <div className="flex flex-col items-center gap-16   max-lg:max-w-[380px]  bg-[#f4f4f4]">
+     
+        <div className="flex flex-col items-center gap-16 mt-5 max-lg:max-w-[380px]  bg-[#f4f4f4]">
           {/* Industry Filters */}
           <div className="  py-[15px] px-4 lg:px-[22px] flex flex-col gap-4 ">
             <div className=" flex flex-col gap-4 ">
@@ -238,10 +244,11 @@ export default function Blog({ filter }: { filter: string | null }) {
           </div> */}
         </div>
         {/* Display Cards */}
+       
         <div id="research" className="w-full">
-          <div className="text-[#001d59]  font-bold  max-md:text-center text-3xl md:text-3xl lg:text-[42px] px-5 mt-5">
+          {/* <div className="text-[#001d59]  font-bold  max-md:text-center text-3xl md:text-3xl lg:text-[42px] px-5 mt-5">
             Research Synopsis List
-          </div>
+          </div> */}
 
         <div className="w-full p-5 flex flex-col gap-5  ">
           {displayCards}
