@@ -51,24 +51,30 @@ const FloatingFooter = () => {
     }
   };
 
+  // width: 800px;
+  // height: 75px;
+  // background: #000c19;
+  // border-radius: 10px;
+
+
   return (
     <div
       className={`fixed bottom-0 left-0 w-full z-20 flex items-center justify-center transition-all duration-300 mb-2 ${
-        isMinimized ? 'h-14' : 'sm:h-[80px] lg:h-[100px]'
+        isMinimized ? 'h-14' : 'sm:h-[60px] lg:h-[80px]'
       }`}
     >
       <div
         className={`relative ${
-          isMinimized ? 'w-[200px]' : 'w-[80%] xl:w-[900px]'
-        } h-full flex items-center justify-center overflow-hidden transition-all duration-300`}
+          isMinimized ? 'w-[180px]' : 'w-[70%] xl:w-[800px]'
+        } h-full flex items-center justify-center overflow-hidden transition-all duration-300 bg-[#000c19] rounded-2xl`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <img
+        {/* <img
           src="/images/footer/footer3.png"
           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
           alt="Footer Background"
-        />
+        /> */}
 
         <div className="relative max-sm:mx-2 max-sm:py-2 z-10 flex flex-col items-center text-center">
           {isMinimized ? (
@@ -128,26 +134,8 @@ const FloatingFooter = () => {
           ) : (
             // Expanded state: Show full content
             <>
-              <div className="flex space-x-2 mt-2">
-                <button
-                  onClick={() => {
-                    router.push('/Communities#community');
-                  }}
-                  aria-label="Our Solutions"
-                  className="sm:w-[170px] w-[110px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
-                >
-                  Our Solutions
-                </button>
-                <button
-                  onClick={() => {
-                    router.push('/Communities#community');
-                  }}
-                  aria-label="Industries and Focus"
-                  className="sm:w-[170px] w-[110px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
-                >
-                  Industries and Focus
-                </button>
-                <button
+              <div className="flex space-x-2">
+              <button
                   onClick={() => {
                     router.push('/Communities#community');
                   }}
@@ -158,12 +146,31 @@ const FloatingFooter = () => {
                 </button>
                 <button
                   onClick={() => {
+                    router.push('/Communities#community');
+                  }}
+                  aria-label="Solutions"
+                  className="sm:w-[170px] w-[110px] sm:h-[40px] border border-white-200 h-[32px] rounded-lg text-[#ffffff] text-xs md:text-sm font-medium hover:bg-yellow-400 hover:text-[#000c19]"
+                >
+                  Solutions
+                </button>
+                <button
+                  onClick={() => {
+                    router.push('/Communities#community');
+                  }}
+                  aria-label="Industries and Focus"
+                  className="sm:w-[170px] w-[110px] sm:h-[40px] border border-white-200 h-[32px] rounded-lg text-[#ffffff] text-xs md:text-sm font-medium hover:bg-yellow-400 hover:text-[#000c19]"
+                >
+                  Industries
+                </button>
+               
+                <button
+                  onClick={() => {
                     router.push('/research-synopsis');
                   }}
                   aria-label="Research Synopsis"
-                  className="sm:w-[170px] w-[110px] sm:h-[40px] h-[32px] rounded-lg bg-white text-[#004B96] text-xs md:text-sm font-medium hover:bg-gray-200"
+                  className="sm:w-[170px] w-[110px] sm:h-[40px] border border-white-200 h-[32px] rounded-lg text-[#ffffff] text-xs md:text-sm font-medium hover:bg-yellow-400 hover:text-[#000c19]"
                 >
-                  Research Synopsis
+                  Research
                 </button>
               </div>
             </>
