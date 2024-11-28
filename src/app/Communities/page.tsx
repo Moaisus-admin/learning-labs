@@ -6,6 +6,8 @@ import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import { Button } from '@/components/ui/Button';
 import React, { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
 
 function Page() {
 
@@ -24,6 +26,8 @@ function Page() {
       scrollToElement();
     }
   }, []);
+  const router = useRouter();
+
   
   return (
     <div>
@@ -80,6 +84,9 @@ function Page() {
               <Button
                 variant="primary"
                 className="w-full max-w-[344px] max-sm:text-base max-sm:py-4"
+                onClick={() => {
+                  router.push('/Signup');
+                }}
               >
                 Sign Up Now
               </Button>
