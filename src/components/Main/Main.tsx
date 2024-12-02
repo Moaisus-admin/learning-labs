@@ -1,6 +1,7 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '../ui/Button'
+import Modal from '../Modals/EnquiryModal';
 const logos = [
     '/images/logos/lnt.svg',
     '/images/logos/sam.svg',
@@ -10,6 +11,10 @@ const logos = [
 ]
 
 function Main() {
+    const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
     return (
         <>
             <div className='relative overflow-hidden min-h-[70vh] sm:min-h-[80vh] min-w-full flex justify-center items-center '>
@@ -36,14 +41,14 @@ function Main() {
                             </div>
                             <div className='flex gap-[20px] justify-center'>
                                 <Button onClick={()=>window.open("/Communities#community", "_self")} variant={'primary'} className='bg-[#00b84d] text-[#ffffff]'>Join Community</Button>
-                                <Button variant={'outline'} className='border-[#ffffff] text-[#ffffff] '>Let’s Collaborate</Button>
+                                <Button variant={'outline'} onClick={openModal} className='border-[#ffffff] text-[#ffffff] '>Let’s Collaborate</Button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
         </>
     )
 }
