@@ -41,23 +41,37 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     >
       {/* Main Modal Container */}
       <div
-        className="bg-white rounded-lg shadow-lg flex overflow-visible relative"
-        style={{ width: '1000px' }} // Modal width
+        className="bg-white rounded-lg shadow-lg flex flex-col lg:flex-row overflow-visible relative max-w-full lg:max-w-[1045px]"
       >
         {/* Left Section */}
         <div
-          className="bg-white text-[#081F5C] flex flex-col justify-center items-center"
-          style={{ width: '499px', padding: '32px' }} // Left section width and padding
+          className="hidden lg:flex bg-white text-[#081F5C] flex-col justify-center items-center rounded-lg"
+          style={{
+            backgroundImage: "url('/images/communities/GreenLoginBg.svg')",
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '540px',
+            padding: '32px',
+          }}
         >
           <h2
-            className="font-bold text-center"
-            style={{ fontSize: '36px', marginBottom: '16px' }} // Font size and margin
+            className="font-extrabold text-left"
+            style={{
+              fontSize: '74px',
+              marginBottom: '16px',
+              fontFamily: 'satoshi',
+              letterSpacing: '-2.96px',
+              lineHeight: '74px',
+            }}
           >
-            Let's Collaborate
+            Let's
+            <br />
+            <span className="text-[#53B553]">Collaborate</span>
           </h2>
           <p
-            className="italic text-center"
-            style={{ fontSize: '16px' }} // Font size
+            className="italic text-left text-[#212121] font-normal"
+            style={{ fontSize: '36px' }}
           >
             A <span className="font-semibold">spark</span> starts here
           </p>
@@ -65,40 +79,46 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
         {/* Right Section (Form Section) */}
         <div
-          className="bg-[#081F5C] text-white relative rounded-lg z-10"
+          className="bg-[#081F5C] text-white relative rounded-lg z-10 w-full lg:w-[501px] lg:mt-[-32px] lg:mr-[32px]"
           style={{
-            width: '501px',
-            height: '527px',
-            marginTop: '-32px',
-            marginLeft: '-32px',
+            // marginTop: '0',
+            marginLeft: '0',
             marginBottom: '32px',
-            padding: '32px', // Form section width, height, margins, and padding
+            padding: '32px',
+    //         marginTop: '-32px',
+   
+    // marginRight:' 32px',
           }}
         >
           <div className="w-full h-full">
             <div className="flex justify-end items-center">
-            <button
-                className="text-gray-300 hover:text-gray-100 border-1 border-gray-100 rounded-full focus:ring-2 focus:ring-gray-100"
+              <button
+                className="text-gray-300 hover:text-gray-100 border border-gray-100 rounded-full focus:ring-2 focus:ring-gray-100"
                 onClick={onClose}
-                style={{ fontSize: '16px' }} // Font size
+                style={{
+                  fontSize: '16px',
+                  width: '34px',
+                  height: '34px',
+                  opacity: '0.4',
+                  color: '#ffffff',
+                }}
               >
                 ✕
               </button>
-                </div>
+            </div>
             <div
               className="flex justify-between items-center"
-              style={{ marginBottom: '16px' }} // Margin bottom
+              style={{ marginBottom: '16px' }}
             >
               <h2
                 className="font-semibold"
-                style={{ fontSize: '16px' }} // Font size
+                style={{ fontSize: '16px' }}
               >
                 You're looking for (Please Select)
               </h2>
-             
             </div>
             {/* Buttons for Inquiry Type Selection */}
-            <div className="flex space-x-2" style={{ marginBottom: '16px' }}>
+            <div className="flex space-x-2 mb-4">
               <button
                 type="button"
                 onClick={() =>
@@ -159,8 +179,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name and Email Fields Side by Side */}
-              <div className="flex space-x-4">
-                <div style={{ width: '50%' }}>
+              <div className="flex flex-col lg:flex-row lg:space-x-4">
+                <div style={{ width: '100%', marginBottom: '16px' }}>
                   <label
                     className="font-medium"
                     style={{ fontSize: '16px' }}
@@ -183,7 +203,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                     required
                   />
                 </div>
-                <div style={{ width: '50%' }}>
+                <div style={{ width: '100%', marginBottom: '16px' }}>
                   <label
                     className="font-medium"
                     style={{ fontSize: '16px' }}
@@ -274,7 +294,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 type="submit"
                 className="bg-[#53B553] text-white rounded-lg hover:bg-green-700 focus:outline-none"
                 style={{
-                  width: '446px',
+                  width: '100%',
                   height: '46px',
                   paddingTop: '8px',
                   paddingBottom: '8px',
