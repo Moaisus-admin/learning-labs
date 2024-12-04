@@ -5,7 +5,16 @@ import React from 'react';
 function SignupPage() {
 
   return (
-      <div className='bg-[linear-gradient(180deg,#f1fff6_20%,#00000000_100%)]'>
+      <div 
+      // style={{
+      //   backgroundImage: "url('/images/signup/signupBg.svg')",
+      //   backgroundSize: 'contain',
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      // }}
+      className='relative'
+      >
+        <img src="/images/signup/signupBg.svg" className="w-full h-full bg-contain bg-no-repeat absolute" alt="Signup Background" />
       <Header />
       <SignupForm />;
       </div>

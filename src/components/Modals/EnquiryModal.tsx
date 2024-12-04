@@ -41,7 +41,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     >
       {/* Main Modal Container */}
       <div
-        className="bg-white rounded-lg shadow-lg flex flex-col lg:flex-row overflow-visible relative max-w-full lg:max-w-[1045px]"
+        className="bg-white rounded-lg shadow-lg flex flex-col lg:flex-row overflow-visible relative max-w-[90%] lg:max-w-[1000px]"
       >
         {/* Left Section */}
         <div
@@ -79,33 +79,23 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
         {/* Right Section (Form Section) */}
         <div
-          className="bg-[#081F5C] text-white relative rounded-lg z-10 w-full lg:w-[501px] lg:mt-[-32px] lg:mr-[32px]"
+          className="bg-[#081F5C] text-white relative rounded-lg z-10 w-full lg:w-[501px] lg:mt-[-32px] lg:mr-[32px] lg:mb-[32px]"
           style={{
             // marginTop: '0',
             marginLeft: '0',
-            marginBottom: '32px',
             padding: '32px',
-    //         marginTop: '-32px',
-   
-    // marginRight:' 32px',
           }}
         >
           <div className="w-full h-full">
-            <div className="flex justify-end items-center">
-              <button
-                className="text-gray-300 hover:text-gray-100 border border-gray-100 rounded-full focus:ring-2 focus:ring-gray-100"
-                onClick={onClose}
-                style={{
-                  fontSize: '16px',
-                  width: '34px',
-                  height: '34px',
-                  opacity: '0.4',
-                  color: '#ffffff',
-                }}
-              >
-                ✕
-              </button>
-            </div>
+          <div className="flex justify-end">
+  <button
+    onClick={onClose}
+    className="flex items-center justify-center w-[34px] h-[34px] text-[16px] bg-white bg-opacity-40 text-white hover:text-gray-200 rounded-full focus:outline-none"
+  >
+    ✕
+  </button>
+</div>
+
             <div
               className="flex justify-between items-center"
               style={{ marginBottom: '16px' }}
