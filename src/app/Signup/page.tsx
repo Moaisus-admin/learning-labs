@@ -16,7 +16,7 @@ function SignupPage() {
       >
         <img src="/images/signup/signupBg.svg" className="w-full h-full bg-contain bg-no-repeat absolute" alt="Signup Background" />
       <Header />
-      <SignupForm />;
+      <SignupForm />
       </div>
   )
 

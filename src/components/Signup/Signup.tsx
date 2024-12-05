@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 // import { Input } from '@headlessui/react';
 import FloatingLabelInput from '../Fields/FloatingInput';
 import FloatingPasswordInput from '../Fields/FloatingPassword';
+import VideoInTablet from '../Player/VideoPlayer';
+import BenefitSlider from './BenefitsSlider';
 
 
 function SignupForm() {
@@ -160,21 +162,24 @@ function SignupForm() {
 
       {/* Right Side: Content */}
       <div className="w-full xl:w-2/4 flex flex-col lg:items-start sm:justify-center px-4 py-6">
-      <div className="w-full max-w-2xl ">
-          <h2 className="text-4xl font-normal text-gray-800 leading-tight">
-            Here's our <br />
-            <span className="">Joining benefits</span>
-          </h2>
-          <div>
-            <img src="/images/signup/DashboardTab.png" className="w-full" alt="" />
-          </div>
+  <div className="w-full max-w-2xl space-y-6">
+    <h2 className="text-[40px] font-normal ml-[4rem] text-[#171717] font-[700] leading-tight">
+      Here Are Our Joining <br />
+      <span className=""> Benefits</span>
+    </h2>
 
-        
-         
-        </div>
-      </div>
+
+ <VideoInTablet />
+{/* </div> */}
+
+
+<BenefitSlider/>
+
+  </div>
+</div>
+
     </div>
-  );
+  )
 }
 
-export default SignupForm;
+export default SignupForm
