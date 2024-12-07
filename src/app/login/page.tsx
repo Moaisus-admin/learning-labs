@@ -3,7 +3,7 @@ import Header from '@/components/header/Header';
 import SignupForm from '@/components/Signup/Signup';
 import React from 'react';
 
-function SignupPage() {
+function login() {
 
   return (
       <div 
@@ -18,4 +18,4 @@ function SignupPage() {
 
 }
 
-export default SignupPage;
+export default login;

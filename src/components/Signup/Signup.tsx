@@ -28,7 +28,7 @@ function SignupForm() {
 >
 {/* Left Side: Form */}
 <div className="relative w-full xl:w-2/4 flex justify-center items-center px-4 py-6">
-      <div className="w-full max-w-[562px] bg-[#004B96] p-[53px] rounded-lg shadow-lg xl:absolute xl:top-8 xl:right-8"
+      <div className="w-full max-w-[562px] bg-[#004B96] xl:p-[53px] md:p-[53px] lg:p-[53px] p-8 rounded-lg shadow-lg xl:absolute xl:top-8 xl:right-8 "
       style={{
         backgroundImage: "url('/images/signup/join.svg')",
         backgroundSize: 'contain',
@@ -131,24 +131,25 @@ function SignupForm() {
         </div>
 
         {/* Social Buttons */}
-        <div className="mt-4 flex flex-row space-x-2">
-          <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100">
-            <img
-              src="/images/signup/google.svg"
-              alt="Google"
-              className="w-5 h-5 mr-2"
-            />
-            Join Via Google
-          </button>
-          <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100">
-            <img
-              src="/images/signup/linkedin.svg"
-              alt="LinkedIn"
-              className="w-5 h-5 mr-2"
-            />
-            Join Via LinkedIn
-          </button>
-        </div>
+        <div className="mt-4 flex flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col gap-2">
+  <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100">
+    <img
+      src="/images/signup/google.svg"
+      alt="Google"
+      className="w-5 h-5 mr-2"
+    />
+    Join Via Google
+  </button>
+  <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100">
+    <img
+      src="/images/signup/linkedin.svg"
+      alt="LinkedIn"
+      className="w-5 h-5 mr-2"
+    />
+    Join Via LinkedIn
+  </button>
+</div>
+
 
         {/* Already Have an Account */}
         <p className="mt-6 text-center text-[18px] text-white">
@@ -161,7 +162,7 @@ function SignupForm() {
       </div>
 
       {/* Right Side: Content */}
-      <div className="w-full xl:w-2/4 flex flex-col lg:items-start sm:justify-center px-4 py-6">
+      <div className="w-full xl:w-2/4 flex flex-col lg:items-center sm:justify-center px-4 py-6">
   <div className="w-full max-w-2xl space-y-6">
     <h2 className="text-[40px] font-normal ml-[4rem] text-[#171717] font-[700] leading-tight">
       Here Are Our Joining <br />

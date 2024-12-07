@@ -43,26 +43,26 @@ const BenefitSlider = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 2.2, // Show 2.2 slots in a row
-    slidesToScroll: 2,
+    slidesToScroll: 3,
     centerMode: false,
-    appendDots: (dots: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined) => (
-        <div style={{ marginTop: "20px" }}>
-          <ul style={{ display: "flex", justifyContent: "center", gap: "4px" }}>
-            {dots}
-          </ul>
-        </div>
-      ),
-      customPaging: () => (
-        <div
-          style={{
-            width: "10px",
-            height: "10px",
-            backgroundColor: "gray",
-            borderRadius: "50%",
-            transition: "all 0.3s ease",
-          }}
-        ></div>
-      ),
+    // appendDots: (dots: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined) => (
+    //     <div style={{ marginTop: "20px" }}>
+    //       <ul style={{ display: "flex", justifyContent: "center", gap: "4px" }}>
+    //         {dots}
+    //       </ul>
+    //     </div>
+    //   ),
+    //   customPaging: () => (
+    //     <div
+    //       style={{
+    //         width: "10px",
+    //         height: "10px",
+    //         backgroundColor: "gray",
+    //         borderRadius: "50%",
+    //         transition: "all 0.3s ease",
+    //       }}
+    //     ></div>
+    //   ),
     responsive: [
       {
         breakpoint: 1320,
@@ -121,8 +121,13 @@ const BenefitSlider = () => {
         {cardData.map((benefit, index) => (
           <div
             key={index}
-            className="flex flex-row items-center rounded-[8px] shadow-md relative w-full p-4 bg-white"
+            className="flex flex-row items-center rounded-[8px] shadow-md relative w-full p-4 bg-white overflow-hidden mb-1"
           >
+             <img
+                  src={benefit.bg}
+                  alt="Card Background"
+                  className="absolute inset-0 w-full h-full object-contain top-[30%] left-[35%]"
+                />
             {/* Card Icon */}
             <div className="bg-[#EDF5FE] w-[57px] h-[57px] rounded-full p-2 shadow-md flex items-center justify-center">
               <img
