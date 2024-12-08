@@ -1,0 +1,6 @@
+.slick-dots li.slick-active div {
+    background-color: #4AB371 !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+  

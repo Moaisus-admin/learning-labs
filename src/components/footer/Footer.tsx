@@ -20,7 +20,7 @@ function Footer() {
                         <FooterLinks />
                     </div>
                 </div>
-                <div className="pb-[45px]"></div>
+                {/* <div className="pb-[15px]"></div> */}
 
             </div>
         </>
