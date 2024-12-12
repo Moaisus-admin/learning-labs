@@ -185,7 +185,7 @@ function Features() {
                 <div>
                     <h1 className='text-white text-3xl md:text-3xl lg:text-[42px]  text-center mt-5 font-bold'>Industries in focus</h1>
                 </div>
-                <div className='flex justify-center'>
+                <div className='flex justify-center overflow-x-auto'>
                     <div className='bg-[rgba(255,255,255,0.12)] max-lg:overflow-x-scroll w-[948px] rounded-[888px] flex md:justify-center px-4 py-2 gap-[42px]'>
                         {data.map((item, index) => (
                             <div key={index} onClick={() => setFeatureData(
