@@ -133,7 +133,7 @@ function LoginForm() {
         {/* Already Have an Account */}
         <p className="mt-6 text-center text-[18px] text-white">
          Need an account?{" "}
-          <Link href="/login" className="text-white font-semibold underline">
+          <Link href="/Signup" className="text-white font-semibold underline">
             Join now
           </Link>
         </p>
