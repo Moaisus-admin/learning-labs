@@ -1,28 +1,25 @@
-'use client'
-import React, { Suspense } from 'react'; // Import Suspense
-import Blog from "@/components/BlockSection";
-import { useSearchParams } from "next/navigation";
-import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
-import FloatingFooter from '@/components/footer/FloatingFooter';
+import Header from '@/components/header/Header';
+import QuoteComponent from '@/components/Research/QuoteComponent';
+import ResearchSynopsis from '@/components/Research/ReserchGrid';
+import React from 'react';
 
-export default function Page() {
+function Page() {
   return (
-    <main >
+    <div className="relative">
+      {/* Adjusted background image position */}
+      <img
+        src="/images/signup/signupBg.svg"
+        className="w-full h-full bg-contain bg-no-repeat absolute z-[-1] top-[-500px]"
+        alt="Signup Background"
+      />
       <Header />
-      <div className="">
-        <Suspense fallback={<div>Loading...</div>}>
-          <BlogWithSearchParams />
-        </Suspense>
-      </div>
+      <QuoteComponent />
+      <ResearchSynopsis />
       <Footer />
-      <FloatingFooter/>
-    </main>
+    </div>
   );
 }
 
-function BlogWithSearchParams() {
-  const search_params = useSearchParams()
-  const ref = search_params.get("text");
-  return <Blog filter={ref} />;
-}
+export default Page;
+
