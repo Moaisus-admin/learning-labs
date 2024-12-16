@@ -19,7 +19,7 @@ const VideoInTablet = () => {
             // YouTube Video
             <iframe
               className="w-full h-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&controls=1&autoplay=1&showinfo=0&autohide=1"
+              src="https://www.youtube.com/embed/gXUuPdv9_RA?autoplay=1&loop=1&playlist=gXUuPdv9_RA&mute=1"
               title="YouTube Video"
               style={{ border: "none" }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
