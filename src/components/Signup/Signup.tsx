@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 // import { Input } from '@headlessui/react';
+import { signIn } from "next-auth/react";
 import FloatingLabelInput from '../Fields/FloatingInput';
 import FloatingPasswordInput from '../Fields/FloatingPassword';
 import VideoInTablet from '../Player/VideoPlayer';
@@ -16,6 +17,13 @@ function SignupForm() {
   const [workEmail, setWorkEmail] = useState("");
   const [password, setPassword] = useState("");
   const [termsAgreed, setTermsAgreed] = useState(false);
+
+  const googleOAuthURL =
+  "https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.metadata.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&include_granted_scopes=true&response_type=token&redirect_uri=https%3A%2F%2Fwww.theorganizationlearninglabs.com%2Fsocial-login%2Fgoogle%2Fcallback&client_id=970222241536-g8f9h0r8locptpsivmkr73j2pqdme04o.apps.googleusercontent.com&service=lso&o2v=2&ddm=1&flowName=GeneralOAuthFlow";
+
+const handleLogin = () => {
+  window.location.href = googleOAuthURL;
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -132,7 +140,9 @@ function SignupForm() {
 
         {/* Social Buttons */}
         <div className="mt-4 flex flex-col xl:flex-row lg:flex-row md:flex-col sm:flex-col gap-2">
-  <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100">
+  <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100"
+  onClick={handleLogin}
+>
     <img
       src="/images/signup/google.svg"
       alt="Google"
@@ -140,7 +150,8 @@ function SignupForm() {
     />
     Join Via Google
   </button>
-  <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100">
+  <button className="w-full flex items-center justify-center bg-white border border-gray-300 rounded-md py-2 hover:bg-gray-100"
+  onClick={() => signIn("linkedin", { callbackUrl: "/" })}>
     <img
       src="/images/signup/linkedin.svg"
       alt="LinkedIn"
@@ -154,7 +165,7 @@ function SignupForm() {
         {/* Already Have an Account */}
         <p className="mt-6 text-center text-[18px] text-white">
           Already have an account?{" "}
-          <Link href="/login" className="text-white font-semibold underline">
+          <Link href="/Login" className="text-white font-semibold underline">
             Login
           </Link>
         </p>

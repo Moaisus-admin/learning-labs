@@ -23,9 +23,9 @@ const Header: React.FC = () => {
       </div>
       <div className="flex gap-5 sm:gap-10 items-center justify-center">
         {/* Conditionally render the Login button */}
-        {pathname !== '/login' && pathname !== '/Signup' && (
+        {pathname !== '/Login' && pathname !== '/Signup' && (
           <div>
-            <Link href="/login">
+            <Link href="/Login">
               <Button variant="primary" className="bg-[#004c92] text-[#ffffff] py-2 px-2">
                 Login
               </Button>

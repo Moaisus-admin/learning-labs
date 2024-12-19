@@ -49,7 +49,7 @@ const ResearchSynopsis: React.FC = () => {
   };
 
   const handleCardClick = (title: string) => {
-    router.push(`/research-synopsis-grid/${encodeURIComponent(title)}`);
+    router.push(`/research-synopsis/${encodeURIComponent(title)}`);
   };
 
 
